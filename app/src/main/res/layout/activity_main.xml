@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="1dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/casesText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cases"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/casesDisp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/deathsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/deaths"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/deathsDisp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/recoveredText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/recovered"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/recoveredDisp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/selectCountryText"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/selectCountry"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/selectCountryField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Total:"
+            android:selectAllOnFocus="true"
+            android:inputType="textCapSentences" />
+
+        <Button
+            android:id="@+id/viewButton"
+            style="@android:style/Widget.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/viewButton" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/totalCasesText"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:text="@string/totCases"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/newCasesText"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:text="@string/newCases"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/totalDeathsText"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:text="@string/totDeaths"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/newDeathsText"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:text="@string/newDeaths"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/totalCasesDisp"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/newCasesDisp"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalDeathsDisp"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/newDeathsDisp"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/totalRecoveredText"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:text="@string/totRecovered"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/activeCasesText"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:text="@string/activeCases"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/seriousText"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:text="@string/seriousCritical"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/casesPerMText"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:text="@string/casesPerM"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/totalRecoveredDisp"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/activeCasesDisp"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/seriousDisp"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totCasesPerMDisp"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </TableRow>
+
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/disclaimeroo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="@string/disclaimer"
+        android:textAlignment="center"
+        android:textSize="8sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom|center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:min="0"
+            android:max="100"
+            android:progress="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
