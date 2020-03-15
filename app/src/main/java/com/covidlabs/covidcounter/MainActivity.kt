@@ -143,4 +143,3 @@ private class getHTMLdataTask : AsyncTask<Void, Void, String>() {
         return html
     }
 }
-
